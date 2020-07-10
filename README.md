@@ -1,4 +1,46 @@
-﻿# UniNaturalComparer
+# UniNaturalComparer
+
+自然順で文字列をソートできる機能
+
+## 使用例
+
+```cs
+using Kogane;
+using System.Linq;
+using UnityEngine;
+
+public class Example : MonoBehaviour
+{
+    private void Awake()
+    {
+        var list = new[]
+        {
+            "icon12.png",
+            "icon11.png",
+            "icon2.png",
+            "icon1.png",
+        };
+
+        // icon1.png
+        // icon11.png
+        // icon12.png
+        // icon2.png
+        foreach ( var str in list.OrderBy( x => x ) )
+        {
+            Debug.Log( str );
+        }
+        
+        // icon1.png
+        // icon2.png
+        // icon11.png
+        // icon12.png
+        foreach ( var str in list.OrderBy( x => x, new NaturalComparer() ) )
+        {
+            Debug.Log( str );
+        }
+    }
+}
+```
 
 ## 謝辞
 
