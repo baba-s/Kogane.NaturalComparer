@@ -121,14 +121,14 @@ namespace Kogane
 
         /// <summary>インスタンスを初期化します。</summary>
         public NaturalComparer()
-            : this( NaturalSortOrder.Ascending, NaturalComparerOptions.Default, new char[ 0 ] )
+            : this( NaturalSortOrder.Ascending, NaturalComparerOptions.Default, Array.Empty<char>() )
         {
         }
 
         /// <summary>インスタンスを初期化します。</summary>
         /// <param name="order">ソート方向を表す <see cref="NaturalSortOrder"/>。</param>
         public NaturalComparer( NaturalSortOrder order )
-            : this( order, NaturalComparerOptions.Default, new char[ 0 ] )
+            : this( order, NaturalComparerOptions.Default, Array.Empty<char>() )
         {
         }
 
@@ -136,7 +136,7 @@ namespace Kogane
         /// <param name="order">ソート方向を表す <see cref="NaturalSortOrder"/>。</param>
         /// <param name="options">比較方法を表す <see cref="NaturalComparerOptions"/>。</param>
         public NaturalComparer( NaturalSortOrder order, NaturalComparerOptions options )
-            : this( order, NaturalComparerOptions.Default, new char[ 0 ] )
+            : this( order, NaturalComparerOptions.Default, Array.Empty<char>() )
         {
         }
 
